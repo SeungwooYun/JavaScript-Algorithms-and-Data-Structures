@@ -43,22 +43,24 @@
 
 
 
-// // 강사의 정답 
-// function isPrime (n){
-// // n은 1보다 큰 자연수여야 함 
-// if(n<2) {
-//     return false;
-// }
-// // n보다 작은 값중에 나눠지는 수가 있는지를 for loop로 돌리면 되는 거였다. 
-// // i가 2부터 시작해서 n까지 루프로 나눴으면 됐네;
-// // i를 n까지 걸어서 무한정이 아닌 해당 수의 내부에서만 루프돌리면 되는 거였네  
-// for(let i=2; i < n; i++){
-// if(n%i === 0){
-//     return false
-// }
-// }
-// return true
-// }
-// console.log(isPrime(1))
-// console.log(isPrime(5))
-// console.log(isPrime(4))
+// 강사의 정답 
+function isPrime (n){
+// n은 1보다 큰 자연수여야 함 
+if(n<2) {
+    return false;
+}
+// n보다 작은 값중에 나눠지는 수가 있는지를 for loop로 돌리면 되는 거였다. 
+// i가 2부터 시작해서 n까지 루프로 나눴으면 됐네;
+// i를 n까지 걸어서 무한정이 아닌 해당 수의 내부에서만 루프돌리면 되는 거였네  
+for(let i=2; i < n; i++){
+if(n%i === 0){
+    return false
+}
+}
+return true
+}
+console.log(isPrime(1))
+console.log(isPrime(5))
+console.log(isPrime(4))
+
+// bigO - O(n)
