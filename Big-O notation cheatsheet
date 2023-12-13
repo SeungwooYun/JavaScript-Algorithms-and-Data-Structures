@@ -1,0 +1,4 @@
+Calculation not dependant on inputs - O(1)
+Loop - O(n)
+nested loop - O(n^2)
+input size reduced by half(log n)
