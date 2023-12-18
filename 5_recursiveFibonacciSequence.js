@@ -28,7 +28,7 @@ console.log(recursiveFibonacci(15))
 // console.log(recursiveFibonacci(1))
 // console.log(recursiveFibonacci(2))
 // console.log(recursiveFibonacci(10))
-
+// O(2 pow N)
 
 // (0) => [0]
 // (1) => [0, 1]
