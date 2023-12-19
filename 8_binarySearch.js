@@ -3,7 +3,7 @@
 // Array sort 먼저 진행할 것 
 
 
-let arr = [2, -5, 10, -15, 6]
+let arr = [2, -5, 10, -15, 6, 5, 8, 2]
 
 function binarySearch (arr, t) {
     // sorting 어떻게 하지? 0부터 마지막까지 한바퀴 돌면서 두개 비교했을 때 무조건 뒷 인덱스가 더 크게 
@@ -16,14 +16,27 @@ function binarySearch (arr, t) {
             arr[i] = temp 
         }
        }
-    } 
-    for (let i=0 ; i < arr.length; i++){
-        if(arr[i] === t) {
-            console.log(arr)
-            return i
-        } 
-       }
-       return -1
+    }
+    
+    let n = Math.round(arr.length / 2)
+    if(arr[n]===t){return n}
+    while (arr[n]!==t){
+        if(arr[n] < t){
+            n = Math.round(n/2)
+            if(arr[n]===t){return n}
+        } else if (arr[n] > t){
+            n = n*2
+            if(arr[n]===t){return n}
+        }
+    }
+    return -1
 }
-
 console.log(binarySearch(arr, 7))
+    // for (let i=0 ; i < arr.length; i++){
+    //     if(arr[i] === t) {
+    //         console.log(arr)
+    //         return i
+    //     } 
+    //    }
+    //    return -1
+// 여기는 무지성 linear searching
