@@ -7,3 +7,5 @@ return n * recursiveFactorial(n-1)
 }
 
 console.log(recursiveFactorial(5))
+
+// O(n)
