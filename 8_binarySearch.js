@@ -3,7 +3,7 @@
 // Array sort 먼저 진행할 것 
 
 
-let arr = [2, -5, 10, -15, 6, 5, 8, 2]
+let arr = [2, -5, 10, -15, 6, 5, 8,]
 
 function binarySearch (arr, t) {
     // sorting 어떻게 하지? 0부터 마지막까지 한바퀴 돌면서 두개 비교했을 때 무조건 뒷 인덱스가 더 크게 
@@ -26,11 +26,17 @@ function binarySearch (arr, t) {
             if(arr[n]===t){return n}
         } else if (arr[n] > t){
             n = n*2
+            if(!arr[n]){
+                n=n-1;
+            }
             if(arr[n]===t){return n}
         }
     }
     return -1
 }
+
+// 만약에 더 큰 경우에는 뒤에있는 것들의 중간값을 봐줘야함 
+
 console.log(binarySearch(arr, 7))
     // for (let i=0 ; i < arr.length; i++){
     //     if(arr[i] === t) {
