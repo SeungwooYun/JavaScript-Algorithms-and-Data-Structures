@@ -4,6 +4,7 @@
 
 
 let arr = [1, 2, 3, -6, -10, 6, 7, 8, 9]
+
 function binarySearch (arr, t) {
     for (let j = 0; j < arr.length ; j++){
         for (let i = 0; i< arr.length; i++){
@@ -18,16 +19,17 @@ function binarySearch (arr, t) {
     // 솔팅완료 
     console.log("sorted array", arr)
     
-//     // n은 인자로 받은 array 의 중앙값. 소수의 경우 반올림
+//     // n은 인자로 받은 array 의 중앙값. 소수의 경우 반올림, 인덱스로 써야하기 때문에 -1
     let n = Math.round(arr.length / 2)-1;
     console.log("첫 n", n)
     console.log("첫 arr[n]", arr[n])
     
     let min = 0;
+    // max도 인덱스로 써야하기 때문에 -1 
     let max = arr.length-1;
     if(arr[n]===t){return n};
 
-    // 배열 바깥의 수가 들어온 경우 
+    // 배열 바깥의 수가 들어온 경우 -1 반환 
     if(arr[0] > t || arr[arr.length-1] < t){
         return -1
      }
@@ -57,6 +59,7 @@ function binarySearch (arr, t) {
     }
     if(arr[n]===t){return n} 
 }
+// O(log n) - every iteration the input size reduced by half 
 
 // 만약에 더 큰 경우에는 뒤에있는 것들의 중간값을 봐줘야함 
 
