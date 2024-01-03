@@ -8,7 +8,6 @@ function bubbleSort (arr) {
         let temp = arr[i+1];
         arr[i+1] = arr[i];
         arr[i] = temp;
-        number ++;
         swapped=true
     }
 }
